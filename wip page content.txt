@@ -1,0 +1,22 @@
+Simple Project List
+Team Projects:
+(Untitled) Ant Game (Year 2, GAM240, WIP)
+A Woman's Duty (Year 1, GAM130)
+Pasty Protection Service (Year 1, GAM110, local repo)
+Individual Projects:
+Weather Disasters (Year 2, COMP250, WIP)
+Shopping Cart Race (Year 2, COMP280)
+A Game of Castanets (Year 1, COM140, local repo)
+
+Project Details
+(WIP)
+
+About
+
+
+Resume
+(WIP)
+
+Contact
+GitHub: https://github.com/KnightC0re
+E-mail: damiantsui@gmail.com
