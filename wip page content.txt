@@ -1,12 +1,14 @@
-Simple Project List
+Simple Project List (order of quality)
+
 Team Projects:
-(Untitled) Ant Game (Year 2, GAM240, WIP)
+Ant Game: Title Pending (Year 2, GAM240)
 A Woman's Duty (Year 1, GAM130)
 Pasty Protection Service (Year 1, GAM110, local repo)
+
 Individual Projects:
-Weather Disasters (Year 2, COMP250, WIP)
 Shopping Cart Race (Year 2, COMP280)
 A Game of Castanets (Year 1, COM140, local repo)
+Weather Disasters (Year 2, COMP250)
 
 Project Details
 (WIP)
