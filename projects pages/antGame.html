@@ -23,25 +23,27 @@ layout: default
 <h2>Dialogue System</h2>
 <p>We used ink unity integration by inkle for the dialogue implementation.</p>
 
-<p>first they interacc</p>
+<p>Each character is considered an interactable object, along with grabbable items. As the player interact with them, the game checks the type of object the player interacted with, in this case a character, and loads the dialogue.</p>
 <img src="images/antGame/dialogue/interact.png" alt="code for interacting with characters">
 
-<p>then we load the tecc</p>
+<p>Each character has a set of dialogue scripts and cameras to zoom in on. Once interacted the perspective shifts to the camera and the textbox appears.</p>
 <img src="images/antGame/dialogue/startTalk.png" alt="code for starting dialogue sequence of the character">
 
-<p>player do the click-clacc</p>
+<p>While in dialogue, the player will click to progress. <i>talking</i> determines if the dialogue is still being printed out, so when set to false, the player will not be able to skip the line, however for the player's convenience, the speed of the dialogue printing will increase when clicked. After the message finished printing, the next line can be loaded.</p>
 <img src="images/antGame/dialogue/textClick.png" alt="load next sentence or speed up text when player clicked">
 
-<p>camera can also be detecc</p>
+<p>The camera can also be changed during the dialogue, using Cinemachine functionalities, we can set priorities of the cameras so that the camera we desired could be targeted and used.</p>
 <img src="images/antGame/dialogue/talkCamera.png" alt="switching cameras">
 
-<p>here's proof that it ain't whacc</p>
+<p>Below is a sample script demostrate dialogue loading and camera switching. For the first line the game will turn to camera 2 of the character, then the next line will turn to camera 0.</p>
 <img src="images/antGame/dialogue/dialogueSample.png" alt="sample of dialogue in script">
 <img src="images/antGame/dialogue/text1.png" alt="line 1 with camera 2">
 <img src="images/antGame/dialogue/text2.png" alt="line 2 with camera 0">
 
 <h2>Climbing</h2>
 <p></p>
+<img src="images/antGame//.png" alt="">
 
 <h2>Projectile and Prediction</h2>
 <p></p>
+<img src="images/antGame//.png" alt="">
