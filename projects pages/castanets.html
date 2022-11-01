@@ -16,14 +16,34 @@ layout: default
 
 <p>Check out this <a href="https://www.youtube.com/watch?v=7DORts0pQjE">video demo</a>!</p>
 
-<p>game details</p>
-<p>brief note of contributions</p>
+<p>Ever wanted to play your heart out on some... castanets? Well this game's got you covered. With a grand total of one song, you can play using the handmade castanets controller.</p>
+<p>This project uses an arduino processor to create a usable controller, with the buttons being hooked up to a pair of castanets. The controllers were also painted so that they could be tracked by colours. Level data is also loaded by code.</p>
 
 <h2>Colour Tracking</h2>
-<p></p>
+<p>difference in colours to see if colour exist, and you can set different color</p>
+<img src="images/castanets/Colour/compareColor.png">
+<img src="images/castanets/Colour/colorChange.png">
+
+<p>where the colour is, set the height</p>
+<img src="images/castanets/Colour/setController.png">
+<img src="images/castanets/Colour/heightCam.png">
 
 <h2>Controller Implementation</h2>
-<p></p>
+<p>Uduino is the unity package that connects an arduino controller to a Unity project. set it up first</p>
+<img src="images/castanets/Controller/uduinoSetup.png">
+
+<p>button press changes number, set to true, then set false because no holding</p>
+<img src="images/castanets/Controller/button.png">
+
+<p>if note up and you up you good, vice versa, else you no good</p>
+<img src="images/castanets/Controller/controllerHeight.png">
 
 <h2>Level Data</h2>
-<p></p>
+<p>level is a json file, text read, convert to info</p>
+<img src="images/castanets/Level/loadFile.png">
+
+<p>json look like this</p>
+<img src="images/castanets/Level/noteInfo.png">
+
+<p>note spawn before hit until no more note</p>
+<img src="images/castanets/Level/spawnNote.png">
