@@ -43,8 +43,8 @@ layout: default
 <p>As you can see below, no tools are crafted so far, but the player has collected a lot of wood. Since wood allows you to craft campfire and shelter, the chances of snow hazards have increased.</p>
 <img src="images/weather/Adaptive/WoodOnly.png">
 
-<p>this algorithm works! programmers hate it! also if happen before lower chance later blah blah</p>
-<p>explain this better</p>
+<p>The next weight utilizes a formula called the Upper Confidence Bound. What this formula does is take into account events that happened before to determining the best solution. This was included so that hazards that the player has died to could have a higher chance of appearing, to give a better challenge.</p>
+<p>This formula is split into two parts: the exploitation value; and the exploration value. The exploitation is a simple ratio of wins versus ocurrences. In this game, it's the number of times you died to a hazard against the number of times the hazard has occurred. The exploitation value more complex to calculate, but basically it revolves around how many times a solution has been tried, or how many times it has been 'explored', and in this project's case, the number of times a specified hazard has occurred is compared with the total number of times any hazards have generated.</p>
 <img src="images/weather/Adaptive/UCB.png">
 
 <p>The last two factors to consider are more simple and conventional: time and death. Taking time into account allows more hazards to occur the longer you survive, while dying would avoid hazards from spawning, at least at the start of a game, to allow the player to have more time to prepare.</p>
@@ -59,6 +59,8 @@ layout: default
 
 <p>Death weight is a decreasing exponential curve. If you've dies a lot, this value will start high. The longer you stay alive however, the less this weight affects hazard generation, until the value nullifies.</p>
 <img src="images/weather/Adaptive/deathPoly.png">
+
+<p>full algorithm here</p>
 
 <p>With all chance weighted, a random value is generated to decide which weather is created. The code iterates through the list of weather to see which weather is generated.</p>
 <img src="images/weather/Adaptive/WeatherGen.png">
