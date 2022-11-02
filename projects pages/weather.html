@@ -20,7 +20,10 @@ layout: default
 <h2>Credits</h2>
 
 <ul>
-	<li>sprite art credits here</li>
+	<li><a href="https://assetstore.unity.com/packages/2d/free-2d-mega-pack-177430">Free 2D Mega Pack</a> by <a href="https://assetstore.unity.com/publishers/3947">Brackeys</a></li>
+	<li><a href="https://assetstore.unity.com/packages/2d/environments/pixel-art-platformer-village-props-166114">Pixel Art Platformer - Village Props</a> by <a href="https://assetstore.unity.com/publishers/40001">Cainos</a></li>
+	<li><a href="https://assetstore.unity.com/packages/2d/textures-materials/sky/customizable-skybox-174576">Customizable Skybox</a> by <a href="https://assetstore.unity.com/publishers/48725">Key Mouse</a></li>
+	<li><a href="https://assetstore.unity.com/packages/2d/characters/simple-2d-platformer-assets-pack-188518">Simple 2D Platformer Assets Pack</a> by <a href="https://assetstore.unity.com/publishers/52011">Goldmetal</a></li>
 </ul>
 
 <h2>Adaptive Difficulty</h2>
@@ -38,7 +41,7 @@ layout: default
 <img src="images/weather/Adaptive/SnowstormEx.png">
 
 <p>A possible exploit of this however, is lowering the chances of a hazard by intentionally not making tools, therefore the game would think you don't have the protection needed. This is resolved by checking your materials invenotry as well, and calculating the ratio of materials you have versus the materials needed to craft all the counterable tools.</p>
-<p>screencap isAllCraftable</p>
+<img src="images/weather/Adaptive/resourceFraction.png">
 
 <p>As you can see below, no tools are crafted so far, but the player has collected a lot of wood. Since wood allows you to craft campfire and shelter, the chances of snow hazards have increased.</p>
 <img src="images/weather/Adaptive/WoodOnly.png">
@@ -60,7 +63,8 @@ layout: default
 <p>Death weight is a decreasing exponential curve. If you've dies a lot, this value will start high. The longer you stay alive however, the less this weight affects hazard generation, until the value nullifies.</p>
 <img src="images/weather/Adaptive/deathPoly.png">
 
-<p>full algorithm here</p>
+<p>The formula below outputs the weight of the hazard. The UCB value is multiplied to have more impact as it is more important, while the death weight is deducted from the weight as it only negatively affects the result.</p>
+<img src="images/weather/Adaptive/fullFormula.png">
 
 <p>With all chance weighted, a random value is generated to decide which weather is created. The code iterates through the list of weather to see which weather is generated.</p>
 <img src="images/weather/Adaptive/WeatherGen.png">
