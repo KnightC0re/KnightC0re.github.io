@@ -1,3 +1,27 @@
+// View Modes
+const og = document.getElementById('ogMod');
+const end = document.getElementById('endResult');
+
+const simpleButton = document.getElementById("Simplified");
+simpleButton.onclick = function () { ToggleViewMode() };
+
+let simplifiedView = false;
+
+function ToggleViewMode() {
+    simplifiedView = !simplifiedView;
+
+    og.hidden = simplifiedView;
+    end.hidden = !simplifiedView;
+
+    if (simplifiedView) {
+        simpleButton.textContent = "Formatted View";
+    }
+    else {
+        simpleButton.textContent = "Simplified View (Text Only)";
+    }
+}
+
+// Timestamp Link Generation
 // Get original mod text
 let text = document.getElementById("ogMod").innerHTML;
 
