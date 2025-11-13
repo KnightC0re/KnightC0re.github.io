@@ -5,3 +5,8 @@ body {
 
     font-family: 'Lucida Console', monospace;
 }
+
+a {
+    color: aqua;
+    text-decoration: none;
+}
