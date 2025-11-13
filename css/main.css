@@ -6,11 +6,11 @@ body {
     font-family: 'Lucida Console', monospace;
 }
 
+pre {
+    font-size: 15px;
+}
+
 a {
     color: aqua;
     text-decoration: none;
-}
-
-.hide {
-    display: none;
 }
