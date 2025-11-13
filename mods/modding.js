@@ -10,8 +10,8 @@ let simplifiedView = false;
 function ToggleViewMode() {
     simplifiedView = !simplifiedView;
 
-    og.hidden = simplifiedView;
-    end.hidden = !simplifiedView;
+    og.classList.toggle('hide');
+    end.classList.toggle('hide');
 
     if (simplifiedView) {
         simpleButton.textContent = "Formatted View";
