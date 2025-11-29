@@ -1,34 +1,39 @@
 // Timestamp Link Generation
-// Get original mod text
-let text = document.getElementById("ogMod1").innerHTML;
-let text2 = document.getElementById("ogMod2").innerHTML;
-
 // Timestamp formatting
 const timecode = /[0-9][0-9]:[0-5][0-9]:[0-9][0-9][0-9]\s?\-|[0-9][0-9]:[0-5][0-9]:[0-9][0-9][0-9]\s?\(.*?\)\s?\-/g;
 
 // Generate link based on timestamp
-const replacement = function(time) {
-	return `<a href="osu://edit/${time}">${time}</a>`;
+const replacement = function (time) {
+    return `<a href="osu://edit/${time}">${time}</a>`;
 }
 
-// Find all timestamps to replace with linked versions
-const replaced = text.replace(timecode, replacement);
-const replaced2 = text2.replace(timecode, replacement);
+// Number of times modded on page
+const modNum = 1;
 
-// Duplicated mod post with links
-document.getElementById("endResult1").innerHTML = replaced;
-document.getElementById("endResult2").innerHTML = replaced2;
+// Convert timestamps into links
+function GenerateTimestampLinks(num) {
+    // Set modNum at start
+    modNum = num;
 
-// View Modes
-const modNum = 2;
+    for (let i = 1; i <= modNum; i++) {
+        // Get original mod text
+        let text = document.getElementById("ogMod" + i).innerHTML;
 
-const end = document.getElementById('endResult1');
-const end2 = document.getElementById('endResult2');
+        // Find all timestamps to replace with linked versions
+        const replaced = text.replace(timecode, replacement);
 
-const modButton1 = document.getElementById("mod1");
-const modButton2 = document.getElementById("mod2");
-modButton1.onclick = function () { ShowMod(1) };
-modButton2.onclick = function () { ShowMod(2) };
+        // Duplicated mod post with links
+        document.getElementById("endResult" + i).innerHTML = replaced;
+    }
+}
+
+// View Mods
+function AssignModButtons() {
+    for (let i = 1; i <= modNum; i++) {
+        const modButton = document.getElementById("mod" + i);
+        modButton.onclick = function () { ShowMod(i) };
+    }
+}
 
 function ShowMod(num) {
     for (let i = 1; i <= modNum; i++) {
