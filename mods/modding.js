@@ -8,7 +8,7 @@ const replacement = function (time) {
 }
 
 // Number of times modded on page
-const modNum = 1;
+var modNum = 1;
 
 // Convert timestamps into links
 function GenerateTimestampLinks(num) {
